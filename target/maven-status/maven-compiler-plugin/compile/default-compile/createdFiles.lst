@@ -1,0 +1,6 @@
+org/activiti/cloud/connectors/reward/RewardCloudConnectorApp.class
+org/activiti/cloud/connectors/reward/RewardProcessStarter.class
+org/activiti/cloud/connectors/reward/model/RankedAuthor.class
+org/activiti/cloud/connectors/reward/model/Campaign.class
+org/activiti/cloud/connectors/reward/RewardMessageChannels.class
+org/activiti/cloud/connectors/reward/SendRewardConnector.class
