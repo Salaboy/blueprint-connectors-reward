@@ -4,7 +4,7 @@ pipeline {
     }
     environment {
       ORG               = 'jenkinsx'
-      APP_NAME          = 'blueprint-activiti-cloud-connectors-reward'
+      APP_NAME          = 'blueprint-connectors-reward'
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
     stages {
