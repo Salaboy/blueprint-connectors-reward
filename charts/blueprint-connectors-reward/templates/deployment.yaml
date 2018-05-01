@@ -16,6 +16,17 @@ spec:
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        env:
+        - name: JAVA_OPTS
+          value: {{ .Values.container.javaOpts }}
+        - name: SPRING_RABBITMQ_HOST
+          value: {{ default "rabbitmq" .Values.variables.rabbitmq.host.value }}
+        - name: ACT_RABBITMQ_HOST
+          value: {{ default "rabbitmq" .Values.variables.rabbitmq.host.value }}
+        - name: SPRING_RABBITMQ_USERNAME
+          value: {{ default "guest" .Values.variables.rabbitmq.username.value }}
+        - name: SPRING_RABBITMQ_PASSWORD
+          value: {{ default "guest" .Values.variables.rabbitmq.password.value }}  
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
