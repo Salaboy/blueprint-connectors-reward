@@ -13,8 +13,8 @@ variables:
 container:
   javaOpts: -Xmx512m -Xms512m
 image:
-  repository: draft
-  tag: dev
+  repository: 100.65.179.130:5000/jenkinsx/blueprint-connectors-reward
+  tag: 1.0.19
   pullPolicy: IfNotPresent
 service:
   name: blueprint-connectors-reward
